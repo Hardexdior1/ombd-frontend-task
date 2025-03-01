@@ -16,7 +16,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Cowrywise",
+  title: "OMBD",
   description: "Frontend-task",
 };
 
