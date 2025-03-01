@@ -10,8 +10,11 @@ const Search = () => {
         const searchParam=useSearchParams()
         const query=searchParam.get('query')
         const apiKey = "c5663761";
-        console.log(query)
-          const fetchImages = async (searchQuery) => {
+
+         
+      
+          useEffect(() => {
+             const fetchImages = async () => {
 
 setLoading(true)
 
@@ -34,8 +37,6 @@ setLoading(true)
     setLoading(false);
   }
           };
-      
-          useEffect(() => {
             fetchImages(query);
             setLoading(true)
           }, [query]);
@@ -115,7 +116,7 @@ setLoading(true)
 
 {!loading && images.Response === "False" && (
   <div className="flex items-center justify-center text-black font-bold">
-    Oops! No result for "{query}"
+    Oops! No result for &quot;{query}&quot;
   </div>
 )}
 
